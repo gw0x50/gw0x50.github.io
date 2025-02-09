@@ -8,7 +8,7 @@
       <span>전체 글 수</style> <span>{{sum}}</style> <span>개</style>
     </li>
     <li>
-      <span class="nav__sub-title">이론 지식</span>
+      <span class="nav__sub-title">이론</span>
       <ul>
         {% for category in site.categories %}
           {% if category[0] == "Java" %}
