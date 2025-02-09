@@ -19,13 +19,6 @@
       <span class="nav__sub-title">Coding Test</span>
         <ul>
           {% for category in site.categories %}
-            {% if category[0] == "Java" %}
-              <li><a href="/categories/java" class="">Java ({{category[1].size}})</a></li>
-            {% endif %}
-          {% endfor %}
-        </ul>
-        <ul>
-          {% for category in site.categories %}
             {% if category[0] == "BOJ" %}
               <li><a href="/categories/boj" class="">BOJ ({{category[1].size}})</a></li>
             {% endif %}
