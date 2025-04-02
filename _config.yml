@@ -25,12 +25,49 @@ url                      : "https://gw0x50.github.io"
 baseurl                  : ""
 repository               : "gw0x50/gw0x50.github.io.git"
 teaser                   : "/assets/images/500x300.png"
-# logo                   : # 로고 설정 제거
-masthead_title           : "gw0x50's Devlog"
-breadcrumbs             : true
+logo                     : # path of logo image to display in the masthead, e.g. "/assets/images/88x88.png"
+masthead_title           : # overrides the website title displayed in the masthead, use " " for no title
+# breadcrumbs            : false # true, false (default)
 words_per_minute         : 200
+
+# 사이드바 설정
+defaults:
+  # _posts
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: single
+      author_profile: true
+      read_time: true
+      show_date: true
+      comments: true
+      share: true
+      related: true
+      toc: true
+      toc_sticky: true
+      sidebar:
+        nav: "categories"
+
+# 카테고리 네비게이션 설정
+category_archive:
+  type: liquid
+  path: /categories/
+tag_archive:
+  type: liquid
+  path: /tags/
+
+# 우측 사이드바 네비게이션
+after_footer_scripts:
+  - /assets/js/custom.js
+
+# 인기 포스트 설정
+popular_posts:
+  enabled: true
+  limit: 5  # 표시할 포스트 수
+
 comments:
-  provider               : "giscus"
+  provider               : # false (default), "disqus", "discourse", "facebook", "staticman", "staticman_v2", "utterances", "giscus", "custom"
   giscus:
     repo_id              : "YOUR_REPO_ID" # giscus.app에서 설정 필요
     category_name        : "Comments"
@@ -208,12 +245,6 @@ whitelist:
 #  - <base_path>/tags/my-awesome-tag/index.html ~> path: /tags/
 #  - <base_path>/categories/my-awesome-category/index.html ~> path: /categories/
 #  - <base_path>/my-awesome-category/index.html ~> path: /
-category_archive:
-  type: liquid
-  path: /categories/
-tag_archive:
-  type: liquid
-  path: /tags/
 # https://github.com/jekyll/jekyll-archives
 # jekyll-archives:
 #   enabled:
