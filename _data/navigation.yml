@@ -6,3 +6,23 @@ main:
     url: /categories/
   - title: "Tag"
     url: /tags/
+
+categories:
+  - title: "📚 카테고리"
+    children:
+      - title: "Java"
+        url: /categories/java/
+      - title: "Spring"
+        url: /categories/spring/
+      - title: "Web"
+        url: /categories/web/
+      - title: "Coding Test"
+        url: /categories/coding-test/
+
+  - title: "🏷️ 태그"
+    url: /tags/
+    
+  - title: "📊 인기 포스트"
+    children:
+      - title: "최근 많이 본 글"
+        url: /popular/
